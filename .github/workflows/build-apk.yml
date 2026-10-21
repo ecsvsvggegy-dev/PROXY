@@ -3,6 +3,9 @@ name: Build Android APK
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -12,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Configurar Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
@@ -20,19 +23,23 @@ jobs:
       - name: Instalar Apktool
         run: |
           sudo apt-get update
-          sudo apt-get install -y apktool
+          sudo apt-get install -y curl
+          curl -fL https://github.com/iBotPeaches/Apktool/releases/download/v3.0.3/apktool_3.0.3.jar -o /tmp/apktool.jar
+          printf '#!/bin/sh\nexec java -jar /tmp/apktool.jar "$@"\n' | sudo tee /usr/local/bin/apktool
+          sudo chmod +x /usr/local/bin/apktool
 
       - name: Verificar arquivos
         run: |
           test -f AndroidManifest.xml
           test -f apktool.yml
-          apktool --version
+          java -jar /tmp/apktool.jar --version
 
       - name: Compilar APK
-        run: apktool b . -o app-debug.apk
+        run: java -jar /tmp/apktool.jar b . -o app-debug.apk
 
       - name: Disponibilizar APK
         uses: actions/upload-artifact@v4
         with:
           name: app-debug
           path: app-debug.apk
+          if-no-files-found: error
