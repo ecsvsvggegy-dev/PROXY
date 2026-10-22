@@ -4107,7 +4107,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    const-string v1, "aquilesteam"
+    const-string v1, "lalateam"
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -5652,7 +5652,7 @@
     return-void
 
     :cond_2
-    const-string v0, "aquilesteam"
+    const-string v0, "lalateam"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -5667,7 +5667,7 @@
     return-void
 
     :cond_3
-    const-string p1, "Chave inv\u00e1lida! Chave autorizada: aquilesteam"
+    const-string p1, "Chave inv\u00e1lida! Chave autorizada: lalalesteam"
 
     invoke-direct {p0, p1}, Lcom/mdk/ff/MainActivity;->onLoginError(Ljava/lang/String;)V
 

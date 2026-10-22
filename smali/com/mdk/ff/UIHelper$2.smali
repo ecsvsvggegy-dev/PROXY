@@ -49,7 +49,7 @@
 
     const-string v0, "android.intent.action.VIEW"
 
-    const-string v1, "https://dimenor.store"
+    const-string v1, "https://youtube.com/@lalazinhamods?si=WhyvyjaKf3FvhdoA"
 
     invoke-static {v1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

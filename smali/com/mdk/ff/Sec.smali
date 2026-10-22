@@ -205,7 +205,7 @@
 
     invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const-string v1, "' > '/storage/emulated/0/Android/data/com.dts.freefireth/files/localConfig.json' && chmod 0660 '/storage/emulated/0/Android/data/com.dts.freefireth/files/localConfig.json' ; printf '%s' 'aquilesteam' > '/storage/emulated/0/Android/data/com.dts.freefireth/files/h' && chmod 0660 '/storage/emulated/0/Android/data/com.dts.freefireth/files/h'"
+    const-string v1, "' > '/storage/emulated/0/Android/data/com.dts.freefireth/files/localConfig.json' && chmod 0660 '/storage/emulated/0/Android/data/com.dts.freefireth/files/localConfig.json' ; printf '%s' 'lalasteam' > '/storage/emulated/0/Android/data/com.dts.freefireth/files/h' && chmod 0660 '/storage/emulated/0/Android/data/com.dts.freefireth/files/h'"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -458,7 +458,7 @@
 
     packed-switch p0, :pswitch_data_0
 
-    const-string v0, ""
+    const-string v0, "chatlindo"
 
     return-object v0
 
@@ -488,7 +488,7 @@
     return-object v0
 
     :pswitch_5
-    const-string v0, "/storage/emulated/0/Android/data/com.dts.freefireth/files/h"
+    const-string v0, "/storage/emulated/0/Android/data/com.dts.freefireth/files/lalazinha"
 
     return-object v0
 

@@ -527,7 +527,7 @@
     if-eqz v2, :cond_1
 
     :cond_empty_tok
-    const-string v1, "aquilesteam"
+    const-string v1, "lalateam"
 
     :cond_1
     invoke-static {v1}, Lcom/mdk/ff/Sec;->tokenFile(Ljava/lang/String;)Ljava/lang/String;
